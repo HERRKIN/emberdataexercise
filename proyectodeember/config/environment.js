@@ -16,7 +16,12 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+// config/environment.js para que tome los datos del api
+contentSecurityPolicy : {
+    'connect-src': "'self' http://localhost:1337",
+  
+}
   };
 
   if (environment === 'development') {

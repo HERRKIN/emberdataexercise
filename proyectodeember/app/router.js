@@ -10,7 +10,10 @@ Router.map(function() {
   	this.route('nueva');
  	 this.resource('persona', {path: "/:persona_id"});
   });
-  this.route('personas/nueva');
+  	this.resource('pets', function() { 
+  		this.route('nueva');
+  		this.resource('pet', { path: ':pet_id' }, function() {});
+  	});
 });
 
 export default Router;

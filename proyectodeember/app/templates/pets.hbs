@@ -2,7 +2,7 @@
 
 <div class="panel panel-default">
       <div class="panel-heading">
-           <div class="class='col-md-9"> {{#link-to 'personas.nueva' tagName="button" class="btn btn-default "}}Crear persona{{/link-to}}</div>
+           <div class="class='col-md-9"> {{#link-to 'pets.nueva' tagName="button" class="btn btn-default "}}Crear mascota{{/link-to}}</div>
      </div>
      <div class="panel-body">
        
@@ -13,7 +13,7 @@
                   <ul class="nav">
                       {{#each model}}
                       <li>
-                        {{#link-to 'persona' this }} {{nombre}} {{apellido}}{{/link-to}}
+                        {{#link-to 'pet' this }} {{nombre}} {{color}}{{/link-to}}
                       </li>
                       {{/each}}
                   </ul>
@@ -23,5 +23,3 @@
               </div>
      </div>
    </div>
-
-
