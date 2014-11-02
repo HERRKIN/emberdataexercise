@@ -1,0 +1,26 @@
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Panel heading</div>
+  <div class="panel-body">
+    <p>...</p>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+    <ul class="nav navbar-nav">
+ {{#each model}}
+    <li>
+      <label>{{cedula}}</label>
+      <label>{{nombre}}</label>
+      <label>{{apellido}}</label>
+    </li>
+  {{/each}}
+  </ul >
+  </table>
+  	<div class='col-md-7 '>
+		{{outlet}}
+	</div>
+</div>
+
+
