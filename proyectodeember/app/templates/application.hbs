@@ -1,12 +1,16 @@
-<div class='nav'>
-	<nav class='nav nav-navbar' role="navigation">
-		<ul>
-		  {{#link-to 'index' class='btn btn-default' }}inicio{{/link-to}}
-		  {{#link-to 'personas' class='btn btn-default' }}personas{{/link-to}}
-		</ul>
-	</nav>
-	<div class='container col-md-5 '>
-	{{outlet}}
-		</div>
+
+<div class="container">
+    	<nav class="navbar navbar-default" role="navigation">
+	      	<div class="container-fluid">
+		         	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			          	<ul class="nav navbar-nav">
+				             {{#link-to 'index'  tagName="li" class='btn btn-default' }}inicio{{/link-to}}
+					{{#link-to 'personas'  tagName="li" class='btn btn-default' }}personas{{/link-to}}
+			          	</ul>
+		         	</div>
+	      	 </div>
+     	</nav>
+    {{outlet}}
 </div>
+
 

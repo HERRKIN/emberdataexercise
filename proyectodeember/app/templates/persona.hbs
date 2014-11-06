@@ -1,8 +1,24 @@
+  {{#if editando}}
+      <form role="form">
+      <div class="form-group">
+        <label for="nombre">nombre</label>
+        {{input id='nombre' class="form-control" value=nombre}}
+      </div>
+      <div class="form-group">
+        <label for="apellido">apellido</label>
+        {{textarea id='apellido' class="form-control" value=apellido}}
+      </div>
+      <button type="submit" class="btn btn-default" {{action 'modificar'}}>Guardar</button>
 
-   {{#each model}}
-    <li>
-      <h1>{{cedula}}</h1>
-      <h1>{{nombre}}</h1>
-      <h1>{{apellido}}</h1>
-    </li>
-  {{/each}}
+      </form>
+    {{/if}}
+    {{#unless editando}}
+    <a href="#" {{action 'editar'}}>Editar</a>
+    <a href="#" {{action 'eliminar'}}>Eliminar</a>
+    {{/unless}}
+    <h1>
+    {{nombre}} <small>{{apellido}}</small>
+    </h1>
+
+
+

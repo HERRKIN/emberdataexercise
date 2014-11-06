@@ -1,26 +1,26 @@
 
-<div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Panel heading</div>
-  <div class="panel-body">
-    <p>...</p>
-  </div>
 
-  <!-- Table -->
-  <table class="table">
-    <ul class="nav navbar-nav">
- {{#each model}}
-    <li>
-      <label>{{cedula}}</label>
-      <label>{{nombre}}</label>
-      <label>{{apellido}}</label>
-    </li>
-  {{/each}}
-  </ul >
-  </table>
-  	<div class='col-md-7 '>
-		{{outlet}}
-	</div>
-</div>
+<div class="panel panel-default">
+      <div class="panel-heading">
+           <div class="class='col-md-3"> Panel de Personas</div>
+           <div class="class='col-md-9"> {{#link-to 'personas.nueva' tagName="button" class="btn btn-default "}}Crear persona{{/link-to}}</div>
+     </div>
+      <div class='col-md-3'>
+
+        <table class="table">
+
+                  <ul class="nav">
+                      {{#each model}}
+                      <li>
+                        {{#link-to 'persona' this }} {{nombre}} {{apellido}}{{/link-to}}
+                      </li>
+                      {{/each}}
+                  </ul>
+             </table>
+      </div>
+                 <div class="col-md-9">
+                  {{outlet}}
+              </div>
+   </div>
 
 
