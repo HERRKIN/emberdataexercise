@@ -1,5 +1,5 @@
     <h1>
-    {{nombre}} {{color}}
+    nombre {{nombre}} </br>color {{color}}
     </h1>
     <p>pertenece a:
    {{dueno.nombre}} {{dueno.apellido}}</p>
@@ -15,13 +15,22 @@
         <label for="color">color</label>
         {{input id='color' class="form-control" value = color}}
       </div>
-		seleccionado {{dueno}}
-       {{view Ember.Select  
+		seleccionado {{dueno.id}}
+       <select name="dueno" id="dueno" selection=dueno.id>
+        {{#each personas}}
+        <option value="id">{{nombre}} {{apellido}}</option>
+        {{/each}}
+       </select>
+        {{#each model in personas}}
+        {{model.name}}
+        {{/each}}
+
+       <!--{{view Ember.Select  
 
         content=personas
         optionValuePath="content.id"
         optionLabelPath="content.nombre"
-        selection =  dueno.id}} </br>
+        value = dueno.id}} </br>-->
       <button type="submit" class="btn btn-success" {{action 'modificar'}}>Guardar</button>
 
       </form>
